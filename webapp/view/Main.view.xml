@@ -1,0 +1,77 @@
+<mvc:View controllerName="DIOR.FR.zfrswbdioovt.controller.Main" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	displayBlock="true" xmlns="sap.m">
+	<App id="app" class="diorAppCustom">
+		<pages>
+			<Page id="page" title="{i18n>title}" >
+				<content>
+					<l:HorizontalLayout class="sapUiContentPadding">
+						<MultiComboBox id="EmployeeListCombo" width="43rem" items="{ path: 'employees>/EmployeesSet', mode: 'OneWay' }" showSecondaryValues="true"
+							selectionFinish=".onSectionFinish" selectionChange=".onSectionChange">
+							<core:ListItem key="{employees>ID}" text="{employees>FullName}" additionalText="{employees>ID}"/>
+						</MultiComboBox>
+						<Button id="selectAllBtn" icon="sap-icon://company-view" text="Sélectionner tous les employés" press="onSelectAllEmp"></Button>
+					</l:HorizontalLayout>
+					<l:VerticalLayout width="100%">
+						<Table id="OvtEventsTab" inset="false" sticky="ColumnHeaders" noDataText="{i18n>NoData}">
+							<columns>
+								<Column>
+									<Text text="{i18n>ColPernr}"/>
+								</Column>
+								<Column>
+									<Text text="{i18n>ColBegda}"/>
+								</Column>
+								<Column >
+									<Text text="{i18n>ColBeguz}"/>
+								</Column>
+								<Column >
+									<Text text="{i18n>ColEnduz}"/>
+								</Column>
+								<Column>
+									<Text text="{i18n>ColStdaz}"/>
+								</Column>
+								<Column>
+									<Text text="{i18n>ColWageType}"/>
+								</Column>
+								<Column>
+									<HBox alignItems="Center">
+										<Button class="sapUiTinyMarginEnd" icon="sap-icon://multiselect-all" press=".onSelectAllAp"/>
+										<Text text="{i18n>ColValidation}"/>
+									</HBox>
+								</Column>
+								<Column>
+									<HBox alignItems="Center">
+										<Button class="sapUiTinyMarginEnd" icon="sap-icon://survey" press=".onSelectAllRe"/>
+										<Text text="{i18n>ColRejection}"/>
+									</HBox>
+								</Column>
+							</columns>
+							<dependents>
+								<ColumnListItem id="TableItemTemplate" vAlign="Middle">
+									<cells>
+										<ObjectIdentifier title="{employees>FullName}" text="{employees>EmployeeID}"/>
+										<Text
+											text="{path: 'employees>StartDay', type: 'sap.ui.model.type.Date', formatOptions: { pattern:'dd MMM yyyy' ,source: { pattern: 'yyyyMMdd' } }}"/>
+										<Text
+											text="{path: 'employees>StartTime', type: 'sap.ui.model.type.Time', formatOptions:{ pattern:'HH\'h\'mm' ,source: { pattern: 'HHmmss' } }}"/>
+										<Text
+											text="{path: 'employees>EndTime', type: 'sap.ui.model.type.Time', formatOptions:{ pattern:'HH\'h\'mm' ,source: { pattern: 'HHmmss' } }}"/>
+										<Text text="{path: 'employees>NumberOfHours', type: 'sap.ui.model.type.Float', formatOptions: { decimalSeparator: ',' }}"/>
+										<Text text="{employees>WageTypeText}"/>
+										<CheckBox selected="false" select=".onSelectedAp"/>
+										<CheckBox selected="false" select=".onSelectedRe"/>
+									</cells>
+								</ColumnListItem>
+							</dependents>
+						</Table>
+					</l:VerticalLayout>
+				</content>
+				<footer>
+					<Toolbar id="footerToolbar" width="100%">
+						<ToolbarSpacer/>
+						<Button id="apBtn" text="Sauvegarder" press=".onAppAll" icon="sap-icon://save" type="Default" enabled="false"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

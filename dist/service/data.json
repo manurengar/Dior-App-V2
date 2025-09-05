@@ -1,0 +1,18 @@
+{
+  "Employees":[{
+    "ID": "12345678",
+    "FullName": "Manuel Rentero"
+  },
+  {
+    "ID": "00000008",
+    "FullName": "Javi Bengoechea" 
+  },
+  {
+    "ID": "00030001",
+    "FullName": "Xavi Hernandez" 
+  },
+  {
+    "ID": "01320008",
+    "FullName": "Christian Dior" 
+  }]
+}

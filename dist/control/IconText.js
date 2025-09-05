@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/Control"],e=>{"use strict";return e.extend("DIOR.FR.zfrswbdioovt.control.ProductRating",{metadata:{aggregations:{_icon:{type:"sap.ui.core.Icon",multiple:false,visibility:"hidden"},_text:{type:"sap.m.Text",multiple:false,visibility:"hidden"}}},init(){},renderer(e,i){}})});

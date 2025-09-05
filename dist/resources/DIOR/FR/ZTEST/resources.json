@@ -1,0 +1,67 @@
+{
+    "resources": [
+        {
+            "name": "../zfrswbdioovt/controller/Main-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../zfrswbdioovt/service/data.json"
+        },
+        {
+            "name": "../zfrswbdioovt/manifest.json"
+        },
+        {
+            "name": "../zfrswbdioovt/model/models.js"
+        },
+        {
+            "name": "../zfrswbdioovt/controller/Main.controller.js"
+        },
+        {
+            "name": "../zfrswbdioovt/control/IconText.js"
+        },
+        {
+            "name": "../zfrswbdioovt/Component.js"
+        },
+        {
+            "name": "../zfrswbdioovt/manifest-bundle.zip"
+        },
+        {
+            "name": "../zfrswbdioovt/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "../zfrswbdioovt/model/models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../zfrswbdioovt/i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "../zfrswbdioovt/control/IconText-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../zfrswbdioovt/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../../sap-ui-version.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "../zfrswbdioovt/view/Main.view.xml"
+        },
+        {
+            "name": "../zfrswbdioovt/css/style.css"
+        },
+        {
+            "name": "../zfrswbdioovt/index.html"
+        }
+    ]
+}
